@@ -83,3 +83,11 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# ==================================================================================
+
+# PATHS
+# NEED BETTER SOLUTION: ZSH_CUSTOM???
+
+# added by Anaconda3 2.3.0 installer (Actually not)
+export PATH="/Users/myrmidon/anaconda/bin:$PATH"
