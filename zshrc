@@ -84,10 +84,17 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# ==================================================================================
 
+# ==================================================================================
 # PATHS
+
 # NEED BETTER SOLUTION: ZSH_CUSTOM???
 
 # added by Anaconda3 2.3.0 installer (Actually not)
 export PATH="/Users/myrmidon/anaconda/bin:$PATH"
+
+
+# ==================================================================================
+# ALIASES
+
+alias julia="exec '/Applications/Julia-0.3.11.app/Contents/Resources/julia/bin/julia'"
