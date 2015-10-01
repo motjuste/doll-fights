@@ -7,3 +7,9 @@
 [submodule "gitflow"]
 	path = gitflow
 	url = https://github.com/datasift/gitflow
+[submodule "vim/bundle/vim-pathogen"]
+	path = vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim/bundle/vim-wombat256mod"]
+	path = vim/bundle/vim-wombat256mod
+	url = https://github.com/michalbachowski/vim-wombat256mod.git
