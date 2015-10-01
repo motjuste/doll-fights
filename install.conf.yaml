@@ -9,6 +9,7 @@
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.gitignore: gitignore 
     ~/Wombat.itermcolors: Wombat.itermcolors
+    ~/.pylintrc: pylintrc
 
 - shell:
     - [git submodule update --init --recursive, "Installing submodules"]

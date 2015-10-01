@@ -239,13 +239,13 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
 
 # Show icons for hard drives, servers, and removable media on the desktop
-# defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-# defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-# defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-# defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 # Finder: show hidden files by default
-# defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool false
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -575,7 +575,7 @@ defaults write com.apple.terminal StringEncodings -array 4
 
 # 	(* Store the IDs of all the open terminal windows. *)
 # 	set initialOpenedWindows to id of every window
-# 
+#
 # 	(* Open the custom theme so that it gets added to the list
 # 	   of available terminal themes (note: this will open two
 # 	   additional terminal windows). *)
@@ -591,23 +591,23 @@ defaults write com.apple.terminal StringEncodings -array 4
 # 	set allOpenedWindows to id of every window
 
 # 	repeat with windowID in allOpenedWindows
-# 
+#
 # 		(* Close the additional windows that were opened in order
 # 		   to add the custom theme to the list of terminal themes. *)
 # 		if initialOpenedWindows does not contain windowID then
 # 			close (every window whose id is windowID)
-# 
+#
 # 		(* Change the theme for the initial opened terminal windows
 # 		   to remove the need to close them in order for the custom
 # 		   theme to be applied. *)
 # 		else
 # 			set current settings of tabs of (every window whose id is windowID) to settings set themeName
 # 		end if
-# 
+#
 # 	end repeat
-# 
+#
 # end tell
-# 
+#
 # EOD
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
