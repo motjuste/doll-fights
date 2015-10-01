@@ -1,5 +1,8 @@
 set nocompatible      " We're running Vim, not Vi! .. be iMproved
 
+" Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc source %
+
 "--------------
 " Load pathogen
 "--------------
@@ -34,3 +37,105 @@ filetype off
 filetype plugin indent on
 syntax on
 set autoindent
+
+" Color Column
+set tw=79   " width of document (used by gd)
+set colorcolumn=80
+highlight ColorColumn ctermbg=233
+
+set ruler " show current position in file
+
+"---------------------
+" Basic editing config
+"---------------------
+
+" Automatic switching between absolute and relative mode
+set relativenumber
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
+" Better copy & paste
+ " When you want to paste large blocks of code into vim,     press F2 before you
+ " paste. At the bottom you should see ``-- INSERT (past    e) --``.
+ set pastetoggle=<F2>
+ set clipboard=unnamed
+
+" easier moving of code blocks
+" Try to go into visual mode (v), thenselect several li    nes of code here and
+" then press ``>`` several times.
+vnoremap < <gv  " better indentation
+vnoremap > >gv  " better indentation
+
+set mouse+=a " enable mouse mode (scrolling, selection,     etc)
+
+" Real programmers don't use TABs but spaces
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
+
+set incsearch " incremental search (as string is being     typed)
+set hls " highlight search
+"smart something-sensitive search
+set ignorecase
+set smartcase
+
+set history=8192  "more history
+set undolevels=1000  "more undo
+
+
+"---------------------
+" Navigation
+"---------------------
+
+set mouse=a " enable mouse mode (scrolling, selection,     etc)
+
+" Open split panes to the right and bottom
+set splitbelow
+set splitright
+
+" bind Ctrl+<movement> keys to move around the windows,     instead of using Ctrl+w + <movement>
+" Every unnecessary keystroke that can be saved is good   for your health :)
+" map <c-j> <c-w>j
+" map <c-k> <c-w>k
+" map <c-l> <c-w>l
+" map <c-h> <c-w>h
+
+" easier moving between tabs
+" map <Leader>n <esc>:tabprevious<CR>
+" map <Leader>m <esc>:tabnext<CR>
+
+set timeout timeoutlen=1000 ttimeoutlen=100  "fix slow O inserts
+
+"Tab completion for files/buffers
+set wildmode=longest,list
+set wildmenu
+
+"---------------------
+" Misc
+"---------------------
+
+"Disable backup and swap files
+set nobackup
+set nowritebackup
+set noswapfile
+
+set autochdir  "automatically set current directory to the directory of the last opened file
+
+"---------------------
+" Plugin Config
+"---------------------
+
+" vim-powerline
+set laststatus=2  "Always show statusline
+set encoding=utf-8 "for the fancy stuff
+
+"CtrlP
+let g:ctrlp_map = '<c-p>'
+nnoremap ; :CtrlPBuffer<CR>
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_max_height = 30
