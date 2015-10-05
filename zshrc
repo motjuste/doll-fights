@@ -91,7 +91,7 @@ export LANG=en_US.UTF-8
 # NEED BETTER SOLUTION: ZSH_CUSTOM???
 
 # added by Anaconda3 2.3.0 installer (Actually not)
-export PATH="/Users/myrmidon/anaconda/bin:$PATH"
+export PATH="//anaconda/bin:$PATH"
 
 
 # ==================================================================================
