@@ -10,6 +10,7 @@
     ~/.gitignore: gitignore 
     ~/Wombat.itermcolors: Wombat.itermcolors
     ~/.pylintrc: pylintrc
+    ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Wombat.dvtcolortheme: "Wombat-256-for-Xcode/Wombat 256 @ZacHallett.dvtcolortheme"
 
 - shell:
     - [git submodule update --init --recursive, "Installing submodules"]
