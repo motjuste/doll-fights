@@ -97,4 +97,4 @@ export PATH="//anaconda/bin:$PATH"
 # ==================================================================================
 # ALIASES
 
-alias julia="exec '/Applications/Julia-0.3.11.app/Contents/Resources/julia/bin/julia'"
+alias julia="exec '/Applications/Julia-0.4.0.app/Contents/Resources/julia/bin/julia'"
