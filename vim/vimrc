@@ -143,7 +143,7 @@ set encoding=utf-8 "for the fancy stuff
 let g:ctrlp_map = '<c-p>'
 nnoremap ; :CtrlPBuffer<CR>
 let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.venv/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.venv/*,*.pyc
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|venv)$'
 let g:ctrlp_max_height = 30
 
@@ -165,3 +165,35 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
+
+" Omnicomplete related stuff
+set completeopt=longest,menuone
+inoremap <c-space> <C-x><C-o>
+inoremap <c-@> <C-x><C-o>
+set omnifunc=jedi#completions
+
+
+" found here: http://stackoverflow.com/a/2170800/70778
+function! OmniPopup(action)
+    if pumvisible()
+        if a:action == 'j'
+            return "\<C-N>"
+        elseif a:action == 'k'
+            return "\<C-P>"
+        endif
+    endif
+    return a:action
+endfunction
+inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
+inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
+
+" SuperTab
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabDefaultCompletionType = "context"
+
+" Settings for jedi-vim
+" =====================
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 0
+map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
