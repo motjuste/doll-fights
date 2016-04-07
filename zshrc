@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-hubflow git-flow git-extras osx python wd brew atom )
+plugins=(git git-flow-avh git-extras osx python wd brew atom pip )
 
 # User configuration
 
@@ -97,4 +97,12 @@ export PATH="//anaconda/bin:$PATH"
 # ==================================================================================
 # ALIASES
 
-alias julia="exec '/Applications/Julia-0.4.0.app/Contents/Resources/julia/bin/julia'"
+alias julia="exec /Applications/Julia-0.4.3.app/Contents/Resources/julia/bin/julia"
+alias a="atom ."
+alias sann="source activate nn"
+alias iais="source activate iais; cd ~/iais/"
+alias evnd="atom ~/Google\ Drive/evernote"
+
+export VAMP_PATH=$HOME/Library/Audio/Plug-Ins/Vamp
+export PATH="/usr/local/sbin:$PATH"
+

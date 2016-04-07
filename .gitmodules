@@ -22,3 +22,24 @@
 [submodule "Wombat-256-for-Xcode"]
 	path = Wombat-256-for-Xcode
 	url = https://github.com/zachallett/Wombat-256-for-Xcode.git
+[submodule "vim/bundle/julia-vim"]
+	path = vim/bundle/julia-vim
+	url = git://github.com/JuliaLang/julia-vim.git
+[submodule "vim/bundle/vim-operator-user"]
+	path = vim/bundle/vim-operator-user
+	url = https://github.com/kana/vim-operator-user
+[submodule "vim/bundle/vim-yapf-format"]
+	path = vim/bundle/vim-yapf-format
+	url = git://github.com/pignacio/vim-yapf-format
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/vim-operator-flashy"]
+	path = vim/bundle/vim-operator-flashy
+	url = https://github.com/haya14busa/vim-operator-flashy
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
