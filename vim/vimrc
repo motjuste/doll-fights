@@ -45,6 +45,13 @@ highlight ColorColumn ctermbg=233
 
 set ruler " show current position in file
 
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
 "---------------------
 " Basic editing config
 "---------------------
@@ -89,9 +96,9 @@ set undolevels=1000  "more undo
 " Bind nohl
 " Removes highlight of your last search
 " ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
-noremap <C-n> :nohl<CR>
-vnoremap <C-n> :nohl<CR>
-inoremap <C-n> :nohl<CR>
+noremap <Leader>n :nohl<CR>
+vnoremap <Leader>n :nohl<CR>
+" inoremap <Leader>n :nohl<CR>
 
 "---------------------
 " Navigation
@@ -161,7 +168,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
