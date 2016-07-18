@@ -7,9 +7,10 @@
     ~/.vimrc: vim/vimrc
     ~/.zshrc: zshrc
     ~/.oh-my-zsh: oh-my-zsh/
-    ~/.gitignore: gitignore 
+    ~/.gitignore: gitignore
     ~/Wombat.itermcolors: Wombat.itermcolors
     ~/.pylintrc: pylintrc
+    ~/.inputrc: inputrc
     ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Wombat.dvtcolortheme: "Wombat-256-for-Xcode/Wombat 256 @ZacHallett.dvtcolortheme"
 
 - shell:
