@@ -138,6 +138,7 @@ set noswapfile
 
 set autochdir  "automatically set current directory to the directory of the last opened file
 
+runtime macros/matchit.vim
 "---------------------
 " Plugin Config
 "---------------------

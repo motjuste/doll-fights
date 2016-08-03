@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow-avh git-extras osx python wd brew pip vi-mode mercurial)
+plugins=(git git-flow-avh git-extras osx python wd brew vi-mode mercurial zsh-autosuggestions)
 
 # User configuration
 
@@ -98,7 +98,7 @@ export PATH="//anaconda/bin:$PATH"
 # ==================================================================================
 # ALIASES
 
-alias julia="exec /Applications/Julia-0.4.3.app/Contents/Resources/julia/bin/julia"
+# alias julia="exec /Applications/Julia-0.4.6.app/Contents/Resources/julia/bin/julia"
 alias a="atom ."
 alias sann="source activate nn"
 alias sais="source activate iais"
@@ -109,3 +109,5 @@ alias szrc="source ~/.zshrc"
 export VAMP_PATH=$HOME/Library/Audio/Plug-Ins/Vamp
 export PATH="/usr/local/sbin:$PATH"
 
+# Use ctrl+space keys to jump over words
+bindkey '^@' forward-word

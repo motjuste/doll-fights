@@ -49,3 +49,6 @@
 [submodule "vim/bundle/jedi-vim"]
 	path = vim/bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "zsh-autosuggestions"]
+	path = zsh-autosuggestions
+	url = git://github.com/zsh-users/zsh-autosuggestions
