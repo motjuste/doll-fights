@@ -13,6 +13,23 @@
                 KeyCode::DELETE
             </autogen>
         </item>
+		<item>
+			<name>Holing Escape acts as CONTROL_L</name>
+            <appendix></appendix>
+			<identifier>private.hold_escape_to_control</identifier>
+			<autogen>
+                __KeyOverlaidModifier__
+                KeyCode::ESCAPE,
+
+                KeyCode::CONTROL_L,
+
+                KeyCode::ESCAPE
+            </autogen>
+            <block>
+                <modifier_only>ModifierFlag::CONTROL_L</modifier_only>
+                <autogen>__BlockUntilKeyUp__ KeyCode::ESCAPE</autogen>
+            </block>
+        </item>
         <item>
             <name>Input Double-Quote(") by pressing Quote(') twice.</name>
             <identifier>private.quote_x2_to_doublequote</identifier>
@@ -122,7 +139,7 @@
                 Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::KEY_8,
                 KeyCode::KEY_8, ModifierFlag::SHIFT_L,
                 KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
-            <autogen>
+            <!-- <autogen>
                 __KeyToKey__
                 KeyCode::KEY_9, ModifierFlag::NONE,
                 KeyCode::VK_NONE,
@@ -143,7 +160,7 @@
 
                 Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::KEY_0,
                 KeyCode::KEY_0, ModifierFlag::SHIFT_L,
-                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen> -->
             <autogen>
                 __KeyToKey__
                 KeyCode::MINUS, ModifierFlag::NONE,
