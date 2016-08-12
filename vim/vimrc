@@ -154,6 +154,7 @@ let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.venv/*,*.pyc
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|venv)$'
 let g:ctrlp_max_height = 30
+let g:ctrlp_root_markers = ['src']
 
 " vim operator flashy
 map y <Plug>(operator-flashy)
@@ -176,9 +177,9 @@ let g:syntastic_python_checkers = ['flake8']
 
 " Omnicomplete related stuff
 set completeopt=longest,menuone
-inoremap <c-space> <C-x><C-o>
-inoremap <c-@> <C-x><C-o>
-set omnifunc=jedi#completions
+" inoremap <c-space> <C-x><C-o>
+" inoremap <c-@> <C-x><C-o>
+autocmd FileType python set omnifunc=jedi#completions
 
 
 " found here: http://stackoverflow.com/a/2170800/70778
@@ -196,10 +197,25 @@ inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
 inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 
 " SuperTab
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabContextDefaultCompletionType = "<c-p>"
+let g:SuperTabLongestEnhanced = 1
 
-" Settings for jedi-vim
+let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+let g:SuperTabContextDiscoverDiscovery = ["&omnifunc:<c-x><c-o>"]
+autocmd FileType *
+      \ if &omnifunc != '' |
+      \ call SuperTabChain(&omnifunc, "<c-p>") |
+      \ call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
+      \ endif
+
+autocmd FileType *
+    \ if &omnifunc == '' |
+    \ setlocal omnifunc=syntaxcomplete#Complete |
+    \ call SuperTabChain(&omnifunc, "<c-p>") |
+    \ call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
+    \ endif
+
 " =====================
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#popup_on_dot = 0
