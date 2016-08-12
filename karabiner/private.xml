@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<root>
+    <item>
+        <name>Private Bindings</name>
+        <item>
+            <name>Shift+Space to Delete</name>
+            <identifier>private.shift_space_to_delete</identifier>
+            <autogen>
+                __KeyToKey__
+                KeyCode::SPACE,
+
+                MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+                KeyCode::DELETE
+            </autogen>
+        </item>
+        <item>
+            <name>Input Double-Quote(") by pressing Quote(') twice.</name>
+            <identifier>private.quote_x2_to_doublequote</identifier>
+            <autogen>
+                __KeyToKey__
+                KeyCode::QUOTE, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::QUOTE,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::QUOTE,
+                KeyCode::QUOTE, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,
+            </autogen>
+        </item>
+        <item>
+            <name>Doubel press number row KEY to get Shift+KEY</name>
+            <appendix>Double press {1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -, =}</appendix>
+            <appendix>to get       {!, @, #, $, %, ^, \amp, *, (, ), _, +}</appendix>
+            <identifier>private.number_x2_to_shift_number</identifier>
+            <autogen>
+                __KeyToKey__
+                KeyCode::KEY_1, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::KEY_1,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::KEY_1,
+                KeyCode::KEY_1, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::KEY_2, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::KEY_2,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::KEY_2,
+                KeyCode::KEY_2, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::KEY_3, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::KEY_3,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::KEY_3,
+                KeyCode::KEY_3, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::KEY_4, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::KEY_4,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::KEY_4,
+                KeyCode::KEY_4, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::KEY_5, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::KEY_5,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::KEY_5,
+                KeyCode::KEY_5, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::KEY_6, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::KEY_6,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::KEY_6,
+                KeyCode::KEY_6, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::KEY_7, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::KEY_7,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::KEY_7,
+                KeyCode::KEY_7, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::KEY_8, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::KEY_8,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::KEY_8,
+                KeyCode::KEY_8, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::KEY_9, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::KEY_9,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::KEY_9,
+                KeyCode::KEY_9, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::KEY_0, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::KEY_0,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::KEY_0,
+                KeyCode::KEY_0, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::MINUS, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::MINUS,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::MINUS,
+                KeyCode::MINUS, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::EQUAL, ModifierFlag::NONE,
+                KeyCode::VK_NONE,
+
+                Option::KEYTOKEY_DELAYED_ACTION,
+                KeyCode::EQUAL,
+
+                Option::KEYTOKEY_DELAYED_ACTION_CANCELED_BY, KeyCode::EQUAL,
+                KeyCode::EQUAL, ModifierFlag::SHIFT_L,
+                KeyCode::VK_KEYTOKEY_DELAYED_ACTION_DROP_EVENT,</autogen>
+        </item>
+    </item>
+</root>
