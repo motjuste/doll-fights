@@ -171,6 +171,15 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.space = "\ua0"
 
+" tmuxline
+
+let g:tmuxline_separators = {
+    \ 'left' : '',
+    \ 'left_alt': '',
+    \ 'right' : '',
+    \ 'right_alt' : '',
+    \ 'space' : ' '}
+
 "CtrlP
 let g:ctrlp_map = '<c-p>'
 nnoremap ; :CtrlPBuffer<CR>

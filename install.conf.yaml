@@ -13,6 +13,7 @@
     ~/.inputrc: inputrc
     ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Wombat.dvtcolortheme: "Wombat-256-for-Xcode/Wombat 256 @ZacHallett.dvtcolortheme"
     "~/Library/Application Support/Karabiner/private.xml": karabiner/private.xml
+    ~/.tmuxlinesnapshot: tmuxlinesnapshot
 
 - shell:
     - [git submodule update --init --recursive, "Installing submodules"]
