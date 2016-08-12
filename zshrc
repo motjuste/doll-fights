@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow-avh git-extras osx python wd brew vi-mode mercurial zsh-autosuggestions)
+plugins=(git git-flow-avh git-extras osx python wd brew mercurial zsh-autosuggestions)
 
 # User configuration
 
@@ -105,9 +105,11 @@ alias sais="source activate iais"
 alias iais="source activate iais; cd ~/iais/"
 alias evnd="atom ~/Google\ Drive/evernote"
 alias szrc="source ~/.zshrc"
+alias vzrc="vim ~/.zshrc"
+alias vvrc="vim ~/.vimrc"
 
 export VAMP_PATH=$HOME/Library/Audio/Plug-Ins/Vamp
 export PATH="/usr/local/sbin:$PATH"
 
-# Use ctrl+space keys to jump over words
-bindkey '^@' forward-word
+# To accept suggestion
+bindkey '^\' forward-word
