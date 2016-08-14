@@ -67,3 +67,6 @@
 [submodule "vim/bundle/tmuxline.vim"]
 	path = vim/bundle/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim
+[submodule "z"]
+	path = z
+	url = https://github.com/rupa/z.git
