@@ -2,6 +2,51 @@
 <root>
     <item>
         <name>Private Bindings</name>
+
+		<item>
+			<name>Shifts to Parentheses</name>
+			<appendix>When pressed alone, Left Shift types left paren (</appendix>
+			<appendix>When pressed alone, Right Shift Deletes</appendix>
+			<appendix>When used with other keys, they're normal Shifts.</appendix>
+			<identifier>private.shifts_parens</identifier>
+
+			<modifier_not>
+                ModifierFlag::COMMAND_L, ModifierFlag::COMMAND_R,
+                ModifierFlag::CONTROL_L, ModifierFlag::CONTROL_R,
+                ModifierFlag::FN,
+                ModifierFlag::OPTION_L,  ModifierFlag::OPTION_R,
+			</modifier_not>
+
+			<!-- Pushing Shifts together produces () -->
+			<autogen>
+                __KeyToKey__
+                KeyCode::SHIFT_L, ModifierFlag::SHIFT_R,
+                KeyCode::KEY_0, ModifierFlag::SHIFT_L,
+                KeyCode::KEY_9, ModifierFlag::SHIFT_L,
+			</autogen>
+			<autogen>
+                __KeyToKey__
+                KeyCode::SHIFT_R, ModifierFlag::SHIFT_L,
+                KeyCode::KEY_9, ModifierFlag::SHIFT_L,
+                KeyCode::KEY_0, ModifierFlag::SHIFT_L,
+			</autogen>
+
+			<!-- This is the basic mapping. -->
+			<autogen>
+                __KeyOverlaidModifier__
+                KeyCode::SHIFT_R,
+                KeyCode::SHIFT_R,
+                <!-- KeyCode::KEY_0, ModifierFlag::SHIFT_L, -->
+                KeyCode::DELETE,
+			</autogen>
+			<autogen>
+                __KeyOverlaidModifier__
+                KeyCode::SHIFT_L,
+                KeyCode::SHIFT_L,
+                KeyCode::KEY_9, ModifierFlag::SHIFT_R,
+			</autogen>
+		</item>
+
         <item>
             <name>Shift+Space to Delete</name>
             <identifier>private.shift_space_to_delete</identifier>
