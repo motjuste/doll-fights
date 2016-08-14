@@ -108,6 +108,7 @@ alias evnd="atom ~/Google\ Drive/evernote"
 alias szrc="source ~/.zshrc"
 alias vzrc="vim ~/.zshrc"
 alias vvrc="vim ~/.vimrc"
+alias ggg="cat ~/.git-zsh-cheatsheet | more"
 
 export VAMP_PATH=$HOME/Library/Audio/Plug-Ins/Vamp
 export PATH="/usr/local/sbin:$PATH"

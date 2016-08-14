@@ -1,0 +1,62 @@
+alias g='git'
+
+alias ga='git add'
+alias gaa='git add --all'
+
+alias gb='git branch'
+
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gcam='git commit -a -m'
+alias gcmsg='git commit -m'
+
+alias gd='git diff'
+alias gdw='git diff --word-diff'
+
+alias gsb='git status -sb'
+alias gss='git status -s'
+alias gst='git status'
+
+alias gloga='git log --oneline --decorate --graph --all'
+alias glgg='git log --graph'
+alias glgga='git log --graph --decorate --all'
+alias glgm='git log --graph --max-count=10'
+alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glola="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
+
+alias glg='git log --stat'
+alias glgp='git log --stat -p'
+alias glo='git log --oneline --decorate'
+alias glog='git log --oneline --decorate --graph'
+
+alias gdct='git describe --tags `git rev-list --tags --max-count=1`'
+
+alias gco='git checkout'
+alias gcm='git checkout master'
+alias gcb='git checkout -b'
+
+alias gm='git merge'
+alias gmom='git merge origin/master'
+alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
+
+alias gp='git push'
+alias gpd='git push --dry-run'
+alias gpv='git push -v'
+
+alias gf='git fetch'
+alias gfo='git fetch origin'
+
+alias gl='git pull'
+
+alias gg='git gui citool'
+alias gga='git gui citool --amend'
+
+alias gignore='git update-index --assume-unchanged'
+alias gignored='git ls-files -v | grep "^[[:lower:]]"'
+
+alias gsi='git submodule init'
+alias gsu='git submodule update'
+
+alias gts='git tag -s'
+alias gtv='git tag | sort -V'
+
