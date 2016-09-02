@@ -110,6 +110,9 @@ alias vz="vim ~/.zshrc"
 alias vv="vim ~/.vimrc"
 alias ggg="cat ~/.git-zsh-cheatsheet | more"
 alias gfl="git flow"
+alias r3="source activate r3"
+alias r2="source activate r2"
+alias pw="PYTHONPATH=$PWD:$PYTHONPATH py.test -rxs"
 
 export VAMP_PATH=$HOME/Library/Audio/Plug-Ins/Vamp
 export PATH="/usr/local/sbin:$PATH"
