@@ -1,7 +1,14 @@
 <?xml version="1.0"?>
 <root>
     <item>
-        <name>Private Bindings</name>
+    <name>Private Bindings</name>
+        <item>
+            <name>Swap Delete and Escape</name>
+            <identifier>private.swap_delete_and_escape</identifier>
+            <autogen>__KeyToKey__ KeyCode::DELETE, KeyCode::ESCAPE</autogen>
+            <autogen>__KeyToKey__ KeyCode::ESCAPE, KeyCode::DELETE</autogen>
+        </item>
+
 
 		<item>
 			<name>Shifts to Parentheses</name>
@@ -59,20 +66,20 @@
             </autogen>
         </item>
 		<item>
-			<name>Holing Escape acts as CONTROL_L</name>
+			<name>Holing Space acts as SHIFT_L</name>
             <appendix></appendix>
-			<identifier>private.hold_escape_to_control</identifier>
+			<identifier>private.hold_space_to_shift</identifier>
 			<autogen>
                 __KeyOverlaidModifier__
-                KeyCode::ESCAPE,
+                KeyCode::SPACE,
 
-                KeyCode::CONTROL_L,
+                KeyCode::SHIFT_L,
 
-                KeyCode::ESCAPE
+                KeyCode::SPACE
             </autogen>
             <block>
-                <modifier_only>ModifierFlag::CONTROL_L</modifier_only>
-                <autogen>__BlockUntilKeyUp__ KeyCode::ESCAPE</autogen>
+                <modifier_only>ModifierFlag::SHIFT_L</modifier_only>
+                <autogen>__BlockUntilKeyUp__ KeyCode::SPACE</autogen>
             </block>
         </item>
         <item>
@@ -92,9 +99,9 @@
             </autogen>
         </item>
         <item>
-            <name>Doubel press number row KEY to get Shift+KEY</name>
-            <appendix>Double press {1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -, =}</appendix>
-            <appendix>to get       {!, @, #, $, %, ^, \amp, *, (, ), _, +}</appendix>
+            <name>Double press number row KEY to get Shift+KEY</name>
+            <appendix>Double press {1, 2, 3, 4, 5, 6, 7, 8, -, =}</appendix>
+            <appendix>to get       {!, @, #, $, %, ^, \amp, *, _, +}</appendix>
             <identifier>private.number_x2_to_shift_number</identifier>
             <autogen>
                 __KeyToKey__
