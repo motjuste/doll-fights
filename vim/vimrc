@@ -57,6 +57,7 @@ nnoremap <space> za
 "---------------------
 
 " Automatic switching between absolute and relative mode
+set number
 set relativenumber
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertEnter * :set number
