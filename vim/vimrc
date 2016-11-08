@@ -97,8 +97,8 @@ set undolevels=1000  "more undo
 " Bind nohl
 " Removes highlight of your last search
 " ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
-noremap <Leader>n :nohl<CR>
-vnoremap <Leader>n :nohl<CR>
+noremap <Leader>h :nohl<CR>
+vnoremap <Leader>h :nohl<CR>
 " inoremap <Leader>n :nohl<CR>
 
 "---------------------

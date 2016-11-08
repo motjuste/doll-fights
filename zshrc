@@ -116,6 +116,7 @@ alias pw="PYTHONPATH=$PWD:$PYTHONPATH py.test -rxs"
 
 export VAMP_PATH=$HOME/Library/Audio/Plug-Ins/Vamp
 export PATH="/usr/local/sbin:$PATH"
+export RENNET_ROOT="$HOME/Delve/iais/rennet"
 
 # To accept suggestion
 bindkey '^\' forward-word
