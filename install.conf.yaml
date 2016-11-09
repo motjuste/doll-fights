@@ -11,8 +11,8 @@
     ~/Wombat.itermcolors: Wombat.itermcolors
     ~/.pylintrc: pylintrc
     ~/.inputrc: inputrc
-    ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Wombat.dvtcolortheme: "Wombat-256-for-Xcode/Wombat 256 @ZacHallett.dvtcolortheme"
-    "~/Library/Application Support/Karabiner/private.xml": karabiner/private.xml
+    # ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Wombat.dvtcolortheme: "Wombat-256-for-Xcode/Wombat 256 @ZacHallett.dvtcolortheme"
+    # "~/Library/Application Support/Karabiner/private.xml": karabiner/private.xml
     ~/.tmuxlinesnapshot: tmuxlinesnapshot
     ~/.z.sh : z/z.sh
     ~/.git-zsh-cheatsheet: .git-zsh-cheatsheet

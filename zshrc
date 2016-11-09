@@ -69,6 +69,8 @@ export LANG=en_US.UTF-8
 # else
 #   export EDITOR='mvim'
 # fi
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -92,19 +94,14 @@ source ~/.z.sh
 
 # NEED BETTER SOLUTION: ZSH_CUSTOM???
 
-# added by Anaconda3 2.3.0 installer (Actually not)
-export PATH="//anaconda/bin:$PATH"
+# added by Anaconda3 4.2.0 installer (Actually not)
+export PATH="/Users/abdullah/anaconda3/bin:$PATH"
 
 
 # ==================================================================================
 # ALIASES
 
-# alias julia="exec /Applications/Julia-0.4.6.app/Contents/Resources/julia/bin/julia"
 alias a="atom ."
-alias sann="source activate nn"
-alias sais="source activate iais"
-alias iais="source activate iais; cd ~/iais/"
-alias evnd="atom ~/Google\ Drive/evernote"
 alias sz="source ~/.zshrc"
 alias vz="vim ~/.zshrc"
 alias vv="vim ~/.vimrc"
@@ -114,9 +111,5 @@ alias r3="source activate r3"
 alias r2="source activate r2"
 alias pw="PYTHONPATH=$PWD:$PYTHONPATH py.test -rxs"
 
-export VAMP_PATH=$HOME/Library/Audio/Plug-Ins/Vamp
 export PATH="/usr/local/sbin:$PATH"
 export RENNET_ROOT="$HOME/Delve/iais/rennet"
-
-# To accept suggestion
-bindkey '^\' forward-word
