@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow-avh git-extras osx python wd brew mercurial zsh-autosuggestions)
+plugins=(git git-flow git-extras osx python wd brew mercurial zsh-autosuggestions)
 
 # User configuration
 
@@ -109,7 +109,11 @@ alias ggg="cat ~/.git-zsh-cheatsheet | more"
 alias gfl="git flow"
 alias r3="source activate r3"
 alias r2="source activate r2"
-alias pw="PYTHONPATH=$PWD:$PYTHONPATH py.test -rxs"
+alias pwall="PYTHONPATH=$PWD:$PYTHONPATH py.test -rxs"
+alias pw="pwall -m 'not long_running'"
+alias pwv="pw -v"
+alias pwperf="pwv -m 'perf'"
+alias pwlf="pw -v --lf"
 
 export PATH="/usr/local/sbin:$PATH"
 export RENNET_ROOT="$HOME/Delve/iais/rennet"
