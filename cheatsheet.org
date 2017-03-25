@@ -1,0 +1,164 @@
+#+STARTUP: content
+#+TODO: TODO DOING WAITING DONE
+
+
+* Goals for today Sat, 25-Mar-2017
+
+** Org-mode related
+   Keep in mind to only add shortcuts here that I am going to use. No need to get stuck up fiddling.
+
+*** Finish [[http://orgmode.org/guide/][compact guide]]
+*** Match the ORG shortcuts with
+
+
+* Spacemacs
+
+** General References
+   - [[http://spacemacs.org/doc/DOCUMENTATION][Spacemacs Documentation]]
+
+
+** DOING org-mode
+
+*** General References
+   - [[http://spacemacs.org/layers/+emacs/org/README.html][Spacemacs org-layer shortcuts]
+
+
+*** DONE Visibility Cycling (org-cycle)
+    CLOSED: [2017-03-25 Sat 17:09]
+    Cycling through the levels of visible contents
+
+**** =TAB= : Visibility cycling of the subtree in buffer
+     Cycles through the subtree visibility states
+     1. =folded=
+     2. =children=
+     3. =subtree=
+
+**** =SHFT-TAB= : Global visibility cycling in buffer
+     Cycles through global visibility states as:
+     1. =overview= : Show only top-level headlines.
+     2. =contents= : Show all headlines of all levels, but no body text.
+     3. =showall= : Show everything
+
+**** =SPC-u-SPC-u-TAB= : Switch to startup visibility
+     Startup visibility can be set per file by adding at the top
+
+     =#+STARTUP: content=
+
+     The value can be one of the global visibility states:
+     1. =overview= : Show only top-level headlines. (DEFAULT)
+     2. =contents= : Show all headlines of all levels, but no body text.
+     3. =showall= : Show everything
+
+**** =SPC-u-SPC-u-SPC-u-TAB= : Show the entire buffer including any drawers
+     Opens everything.
+
+
+*** DONE Movement
+    CLOSED: [2017-03-25 Sat 17:09]
+    Jumping to other headlines in the buffer.
+
+**** =g-h= : Backward to higher level heading (outline-up-heading)
+
+**** =g-j= : Next heading at the same level (org-forward-heading-same-level)
+
+**** =g-k= : Previous heading at the same level (org-backward-heading-same-level)
+
+**** =g-l= : Next heading (outline-next-visible-heading)
+
+
+*** DONE Restructuring within buffer
+    CLOSED: [2017-03-25 Sat 19:55]
+
+**** =SPC-m-h-i= : Insert a new heading after current (org-insert-heading-after-current)
+     An empty heading at the same level as the last one is created.
+
+**** =SPC-m-h-I= : Insert heading (org-insert-heading)
+     The new heading at the same level as the last one is created with the contents after the position of the cursor.
+
+**** =SPC-m-h-s= : Insert a new subheading (org-insert-subheading)
+     The new heading is created at a level below the last one, with the contents after the position of the cursor.
+
+**** =<= : Promote current heading by one level (org-metaleft)
+     Promote the current heading by one level. The subtree is not promoted.
+
+**** =>= : Demote current heading by one level (org-metaright)
+     Demote the current heading by one level. The subtree is not demoted.
+
+**** =SPC-m-S-h= : Promote current subtree by one level (org-promote-subtree)
+     Promote the current subtree by one level.
+
+**** =SPC-m-S-l= : Demote current subtree by one level (org-demote-subtree)
+     Demote the current subtree by one level.
+
+**** =SPC-m-S-k= : Move the current subtree up (org-move-subtree-up)
+     Move the current subtree up past 1 headline of the same level.
+
+**** =SPC-m-S-j= : Move the current subtree down (org-move-subtree-down)
+     Move the current subtree down past 1 headline of the same level.
+
+
+*** DONE Sparse trees (org-sparse-tree)
+    CLOSED: [2017-03-25 Sat 20:14]
+    Create /sparse trees/ for selected information in an outline tree.
+    The rest of the document is folded as much as possible.
+
+    Press =RET= to undo the highlights.
+
+**** =SPC-m-/-t= : Create sparse tree with all TODO entries
+
+**** =SPC-m-/-T= : Create sparse tree with entries having specific TODO keyword
+     Prompts further to choose the keyword, taken from the TODO keywords available for the buffer.
+
+**** =SPC-m-/-m= : Create sparse tree with entries selected by a tags/property match
+
+**** =SPC-m-/-p= : Create sparse tree with entries with chosen property and its value
+
+**** =SPC-m-/-r= : Create sparse tree with entries matching a regular expression
+
+**** =SPC-m-/-b= : Create sparse tree with entries with deadlines and schedules before a date
+
+**** =SPC-m-/-a= : Create sparse tree with entries with deadlines and schedules after a date
+
+**** =SPC-m-/-a= : Create sparse tree with entries with deadlines and schedules between a date range
+
+**** =SPC-m-/-d= : Create sparse tree with entries with deadlines and schedules within =org-deadline-warning-days=
+
+
+*** DOING Markup
+    Make words *bold*, /italic/, _underlined_, =code=, ~verbatim~, and +strike-through+.
+
+    - [ ] Add the keybindings for the changing / assigning markups as well.
+
+**** DOING Plain lists
+     There are three types of plain lists:
+     - Unordered :: with items starting with '=-=', '=+=', or '=*='.
+     - Ordered :: with items starting with '=1.=' or '=1)='.
+     - Description :: use '=::=' to separate the /term/ from the descrption,
+
+
+**** TODO Changing color of Markups
+     The goal is to have the different markups to show up in some bright colors, like in atom for markdown files.
+
+     Googling lead me to [[http://emacs.stackexchange.com/questions/5889/how-to-highlight-text-permanently-in-org-mode][this stackexchange question]] with the following code to be added to =dotspacemacs/user-init ()= /I guess/:
+
+     #+NAME: change color of markups
+     #+BEGIN_SRC emacs-lisp
+       (add-to-list 'org-emphasis-alist
+                    '("*" (:foreground "red")
+                      ))
+     #+END_SRC
+
+     - [ ] Figure out how to change only the color, and keep other properties as is
+     - [ ] Choose the colors you want to use, perhaps from [[https://github.com/promek/wombat-dark-syntax/blob/master/styles/colors.less][wombat-dark-syntax]].
+
+
+*** TODO Checkout [[http://www.mkbehr.com/posts/a-research-workflow-with-zotero-and-org-mode/][connecting Zotero to org-mode]]
+*** TODO Checkout [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]]
+*** TODO Configuring todos
+*** TODO Code Blocks
+
+
+** TODO Checkout [[https://gist.github.com/526avijitgupta/fd058b3f61a5d23df667][spacemacs-cheatsheet]]
+
+
+** TODO May be also watch [[https://youtu.be/ZFV5EqpZ6_s?list=PLrJ2YN5y27KLhd3yNs2dR8_inqtEiEweE][ABC's playlist]] for more spacemacs shortcuts
