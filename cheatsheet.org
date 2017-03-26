@@ -1,26 +1,16 @@
 #+STARTUP: content
-#+TODO: TODO DOING WAITING DONE
-
-
-* Goals for today Sat, 25-Mar-2017
-
-** Org-mode related
-   Keep in mind to only add shortcuts here that I am going to use. No need to get stuck up fiddling.
-
-*** Finish [[http://orgmode.org/guide/][compact guide]]
-*** Match the ORG shortcuts with
+#+TODO: TODO LATER DOING WAITING DONE
 
 
 * Spacemacs
-
 ** General References
    - [[http://spacemacs.org/doc/DOCUMENTATION][Spacemacs Documentation]]
 
 
 ** DOING org-mode
-
 *** General References
-   - [[http://spacemacs.org/layers/+emacs/org/README.html][Spacemacs org-layer shortcuts]
+   - [[http://orgmode.org/guide/][Compact guide]]
+   - [[http://spacemacs.org/layers/+emacs/org/README.html][Spacemacs org-layer shortcuts]]
 
 
 *** DONE Visibility Cycling (org-cycle)
@@ -124,17 +114,10 @@
 **** =SPC-m-/-d= : Create sparse tree with entries with deadlines and schedules within =org-deadline-warning-days=
 
 
-*** DOING Markup
+*** LATER Text Markup
     Make words *bold*, /italic/, _underlined_, =code=, ~verbatim~, and +strike-through+.
 
     - [ ] Add the keybindings for the changing / assigning markups as well.
-
-**** DOING Plain lists
-     There are three types of plain lists:
-     - Unordered :: with items starting with '=-=', '=+=', or '=*='.
-     - Ordered :: with items starting with '=1.=' or '=1)='.
-     - Description :: use '=::=' to separate the /term/ from the descrption,
-
 
 **** TODO Changing color of Markups
      The goal is to have the different markups to show up in some bright colors, like in atom for markdown files.
@@ -152,13 +135,35 @@
      - [ ] Choose the colors you want to use, perhaps from [[https://github.com/promek/wombat-dark-syntax/blob/master/styles/colors.less][wombat-dark-syntax]].
 
 
+*** DONE Plain lists
+    CLOSED: [2017-03-26 Sun 17:08]
+     There are three types of plain lists:
+     - Unordered :: with items starting with '=-=', '=+=', or '=*='.
+     - Ordered :: with items starting with '=1.=' or '=1)='.
+     - Description :: use '=::=' to separate the /term/ from the descrption,
+
+     Checkboxes can be added in the beginning of the items in any list as below.
+     1. [X] This is checked
+     2. [ ] This is unchecked
+
+**** =-= : Cycle the entire list level through different bullets (org-cycle-list-bullet)
+
+**** =CTRL-c-CTRL-*= : Convert the plain list at point into a subtree (org-list-make-subtree)
+
+
+*** TODO Footnotes
+
+
+*** TODO Tables
+
+
+
+
 *** TODO Checkout [[http://www.mkbehr.com/posts/a-research-workflow-with-zotero-and-org-mode/][connecting Zotero to org-mode]]
 *** TODO Checkout [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]]
 *** TODO Configuring todos
-*** TODO Code Blocks
 
 
 ** TODO Checkout [[https://gist.github.com/526avijitgupta/fd058b3f61a5d23df667][spacemacs-cheatsheet]]
-
 
 ** TODO May be also watch [[https://youtu.be/ZFV5EqpZ6_s?list=PLrJ2YN5y27KLhd3yNs2dR8_inqtEiEweE][ABC's playlist]] for more spacemacs shortcuts
