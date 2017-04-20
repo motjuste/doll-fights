@@ -4,13 +4,14 @@
 
 * Spacemacs
 ** General References
-   - [[http://spacemacs.org/doc/DOCUMENTATION][Spacemacs Documentation]]
+   - [ ] [[http://spacemacs.org/doc/DOCUMENTATION][Spacemacs Documentation]]
+   - [ ] [[https://ontologicalblog.com/spacemacs-cheat-sheet-1/][ontological blog - Cheat sheet]]
 
 
 ** DOING org-mode
 *** General References
-   - [[http://orgmode.org/guide/][Compact guide]]
-   - [[http://spacemacs.org/layers/+emacs/org/README.html][Spacemacs org-layer shortcuts]]
+   - [ ] [[http://orgmode.org/guide/][Compact guide]]
+   - [ ] [[http://spacemacs.org/layers/+emacs/org/README.html][Spacemacs org-layer shortcuts]]
 
 
 *** DONE Visibility Cycling (org-cycle)
@@ -114,7 +115,7 @@
 **** =SPC-m-/-d= : Create sparse tree with entries with deadlines and schedules within =org-deadline-warning-days=
 
 
-*** LATER Text Markup
+*** TODO Text Markup
     Make words *bold*, /italic/, _underlined_, =code=, ~verbatim~, and +strike-through+.
 
     - [ ] Add the keybindings for the changing / assigning markups as well.
@@ -133,6 +134,8 @@
 
      - [ ] Figure out how to change only the color, and keep other properties as is
      - [ ] Choose the colors you want to use, perhaps from [[https://github.com/promek/wombat-dark-syntax/blob/master/styles/colors.less][wombat-dark-syntax]].
+
+**** TODO Inline Maths using LaTeX
 
 
 *** DONE Plain lists
@@ -159,11 +162,76 @@
 
 
 
-*** TODO Checkout [[http://www.mkbehr.com/posts/a-research-workflow-with-zotero-and-org-mode/][connecting Zotero to org-mode]]
+*** LATER Zotero and org-mode using ~zotxt~
+    - References:
+      + [X] [[http://www.mkbehr.com/posts/a-research-workflow-with-zotero-and-org-mode/][A research workflow with Zotero and Org mode]]
+      + [ ] [[https://ontologicalblog.com/home/part-2/][ontological blog - ... Spacemacs for Academic Writing]]
+
+
+**** Enable ~org-zotxt-mode~ in the org buffer to use the zotxt package
+***** =CTRL-c-"-i= : Insert a zotero link with descriptive link text after searching (org-zotxt-insert-reference-link)
+      By default seaches for title, creater, year.
+      Not hitting =RET= at the end allows for choosing other zotero search methods.
+***** TODO =SPC-m-i-z= : Insert zotero link(s) to the items selected in the zotero application
+      Facing some errors. This is the code being tried:
+      #+BEGIN_SRC emacs-lisp
+        (evil-define-key 'normal evil-org-mode-map
+          (kbd "SPC m i z") '(lambda () (interactive) (org-zotxt-insert-reference-link '(4)))  ;; insert selected in zotero
+          (kbd "SPC m i a") '(lambda () (interactive) (org-zotxt-insert-reference-link '(1)))  ;; allow choosing
+          )
+
+      #+END_SRC
+
+
+
+***** =CTRL-c-"-u= : Update the zotero link at point (org-zotxt-update-reference-link-at-point)
+***** =CTRL-c-"-a= : open attatchment of zotero item linked at point (org-zotxt-open-attachment)
+
+
+**** Enable ~zotxt-easykey-mode~ to get autocompletion of references
+     Takes some time to search.
+
+
+
+
+
 *** TODO Checkout [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]]
 *** TODO Configuring todos
+**** TODO Ask for adding remarks on state changes, for example why waiting
 
 
 ** TODO Checkout [[https://gist.github.com/526avijitgupta/fd058b3f61a5d23df667][spacemacs-cheatsheet]]
 
 ** TODO May be also watch [[https://youtu.be/ZFV5EqpZ6_s?list=PLrJ2YN5y27KLhd3yNs2dR8_inqtEiEweE][ABC's playlist]] for more spacemacs shortcuts
+
+
+** TODO checkout [[http://orgmode.org/manual/Easy-Templates.html][templates]]
+* MacOS Terminal
+
+** Get all files currently open by all processes
+   - [[http://stackoverflow.com/questions/8317177/see-what-process-is-using-a-file-in-mac-os-x][Reference]]
+   - use =lsof= to list all open files, and pipe through =grep= to filter.
+
+* General
+
+** unicode for Bismillah
+   U+FDFD
+
+   ﷽
+
+
+   #+BEGIN_SRC python
+     print('\ufdfd')
+   #+END_SRC
+
+** Better Factorial
+
+#+BEGIN_SRC python
+def factorial(x):
+    res = 1
+    while x > 1:
+        res *= x
+        x -= 1
+
+    return x
+#+END_SRC
