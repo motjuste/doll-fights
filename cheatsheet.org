@@ -206,6 +206,8 @@
 
 
 ** TODO checkout [[http://orgmode.org/manual/Easy-Templates.html][templates]]
+   For auto completing the begin end of source blocks and others. Also Quote Blocks
+
 * MacOS Terminal
 
 ** Get all files currently open by all processes
