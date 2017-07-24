@@ -116,3 +116,5 @@ alias pwlf="pw -v --lf"
 
 export PATH="/usr/local/sbin:$PATH"
 export RENNET_ROOT="$HOME/Delve/iais/rennet"
+export RENNET_X_ROOT="$HOME/Delve/iais/rennet-x"
+export RENNET_DATA_ROOT="$HOME/Delve/iais/rennet-x/data"
