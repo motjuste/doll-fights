@@ -208,6 +208,16 @@
 ** TODO checkout [[http://orgmode.org/manual/Easy-Templates.html][templates]]
    For auto completing the begin end of source blocks and others. Also Quote Blocks
 
+   Essentially, use one of the following after a '<' and hit tab
+
+   | Selector | for                |
+   |----------+--------------------|
+   | s        | #+BEGIN_SRC ...    |
+   | q        | #+BEGIN_QUOTE ...  |
+   | l        | #+BEGIN_LATEX ...  |
+   | c        | #+BEGIN_CENTER ... |
+   | L        | #+LaTeX:           |
+
 * MacOS Terminal
 
 ** Get all files currently open by all processes
