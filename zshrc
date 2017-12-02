@@ -97,24 +97,33 @@ source ~/.z.sh
 # added by Anaconda3 4.2.0 installer (Actually not)
 export PATH="/Users/abdullah/anaconda3/bin:$PATH"
 
+export PATH="/usr/local/sbin:$PATH"
 
 # ==================================================================================
-# ALIASES
 
+# ALIASES
 alias a="atom ."
 alias sz="source ~/.zshrc"
 alias vz="vim ~/.zshrc"
 alias vv="vim ~/.vimrc"
 alias ggg="cat ~/.git-zsh-cheatsheet | more"
 alias gfl="git flow"
-alias r3="source activate r3"
-alias pwall="PYTHONPATH=$PWD:$PYTHONPATH py.test -rxs"
+
+## PYTHON
 alias pw="pwall -m 'not long_running'"
 alias pwv="pw -v"
 alias pwperf="pwv -m 'perf'"
 alias pwlf="pw -v --lf"
+alias pwall="PYTHONPATH=$PWD:$PYTHONPATH py.test -rxs"
+alias ppp="source activate p36"
 
-export PATH="/usr/local/sbin:$PATH"
+## RENNET
+alias r3="source activate r3"
 export RENNET_ROOT="$HOME/Delve/iais/rennet"
 export RENNET_X_ROOT="$HOME/Delve/iais/rennet-x"
 export RENNET_DATA_ROOT="$HOME/Delve/iais/rennet-x/data"
+export RENNET_ENV="$RENNET_ROOT/.rennet_env"
+
+
+# FLUTTER
+export PATH="/Users/abdullah/Delve/read_only/flutter/bin/:$PATH"
