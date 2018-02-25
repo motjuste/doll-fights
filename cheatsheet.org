@@ -1,29 +1,26 @@
-#+STARTUP: content
-#+TODO: TODO LATER DOING WAITING DONE
-
+#+startup: overview
+#+startup: indent
+#+todo: IDEA TODO DOIN WAIT | DONE CANC
+#+property: COOKIE_DATA recursive
+#+author: Abdullah
 
 * Spacemacs
 ** General References
-   - [ ] [[http://spacemacs.org/doc/DOCUMENTATION][Spacemacs Documentation]]
-   - [ ] [[https://ontologicalblog.com/spacemacs-cheat-sheet-1/][ontological blog - Cheat sheet]]
-
-
-** DOING org-mode
+- [ ] [[http://spacemacs.org/doc/DOCUMENTATION][Spacemacs Documentation]]
+- [ ] [[https://ontologicalblog.com/spacemacs-cheat-sheet-1/][ontological blog - Cheat sheet]]
+** DOIN org-mode
 *** General References
    - [ ] [[http://orgmode.org/guide/][Compact guide]]
    - [ ] [[http://spacemacs.org/layers/+emacs/org/README.html][Spacemacs org-layer shortcuts]]
 
-
 *** DONE Visibility Cycling (org-cycle)
-    CLOSED: [2017-03-25 Sat 17:09]
-    Cycling through the levels of visible contents
-
+CLOSED: [2017-03-25 Sat 17:09]
+Cycling through the levels of visible contents
 **** =TAB= : Visibility cycling of the subtree in buffer
-     Cycles through the subtree visibility states
-     1. =folded=
-     2. =children=
-     3. =subtree=
-
+Cycles through the subtree visibility states
+1. =folded=
+2. =children=
+3. =subtree=
 **** =SHFT-TAB= : Global visibility cycling in buffer
      Cycles through global visibility states as:
      1. =overview= : Show only top-level headlines.
@@ -31,213 +28,140 @@
      3. =showall= : Show everything
 
 **** =SPC-u-SPC-u-TAB= : Switch to startup visibility
-     Startup visibility can be set per file by adding at the top
+Startup visibility can be set per file by adding at the top
 
-     =#+STARTUP: content=
+=#+STARTUP: content=
 
-     The value can be one of the global visibility states:
-     1. =overview= : Show only top-level headlines. (DEFAULT)
-     2. =contents= : Show all headlines of all levels, but no body text.
-     3. =showall= : Show everything
-
+The value can be one of the global visibility states:
+1. =overview= : Show only top-level headlines. (DEFAULT)
+2. =contents= : Show all headlines of all levels, but no body text.
+3. =showall= : Show everything
 **** =SPC-u-SPC-u-SPC-u-TAB= : Show the entire buffer including any drawers
-     Opens everything.
-
-
+Opens everything.
 *** DONE Movement
-    CLOSED: [2017-03-25 Sat 17:09]
-    Jumping to other headlines in the buffer.
-
+CLOSED: [2017-03-25 Sat 17:09]
+Jumping to other headlines in the buffer.
 **** =g-h= : Backward to higher level heading (outline-up-heading)
-
 **** =g-j= : Next heading at the same level (org-forward-heading-same-level)
-
 **** =g-k= : Previous heading at the same level (org-backward-heading-same-level)
 
 **** =g-l= : Next heading (outline-next-visible-heading)
-
-
 *** DONE Restructuring within buffer
-    CLOSED: [2017-03-25 Sat 19:55]
-
+CLOSED: [2017-03-25 Sat 19:55]
 **** =SPC-m-h-i= : Insert a new heading after current (org-insert-heading-after-current)
-     An empty heading at the same level as the last one is created.
-
+An empty heading at the same level as the last one is created.
 **** =SPC-m-h-I= : Insert heading (org-insert-heading)
-     The new heading at the same level as the last one is created with the contents after the position of the cursor.
-
+The new heading at the same level as the last one is created with the contents after the position of the cursor.
 **** =SPC-m-h-s= : Insert a new subheading (org-insert-subheading)
-     The new heading is created at a level below the last one, with the contents after the position of the cursor.
-
+The new heading is created at a level below the last one, with the contents after the position of the cursor.
 **** =<= : Promote current heading by one level (org-metaleft)
-     Promote the current heading by one level. The subtree is not promoted.
-
+Promote the current heading by one level. The subtree is not promoted.
 **** =>= : Demote current heading by one level (org-metaright)
-     Demote the current heading by one level. The subtree is not demoted.
-
+Demote the current heading by one level. The subtree is not demoted.
 **** =SPC-m-S-h= : Promote current subtree by one level (org-promote-subtree)
-     Promote the current subtree by one level.
-
+Promote the current subtree by one level.
 **** =SPC-m-S-l= : Demote current subtree by one level (org-demote-subtree)
-     Demote the current subtree by one level.
-
+Demote the current subtree by one level.
 **** =SPC-m-S-k= : Move the current subtree up (org-move-subtree-up)
-     Move the current subtree up past 1 headline of the same level.
-
+Move the current subtree up past 1 headline of the same level.
 **** =SPC-m-S-j= : Move the current subtree down (org-move-subtree-down)
-     Move the current subtree down past 1 headline of the same level.
-
-
+Move the current subtree down past 1 headline of the same level.
 *** DONE Sparse trees (org-sparse-tree)
-    CLOSED: [2017-03-25 Sat 20:14]
-    Create /sparse trees/ for selected information in an outline tree.
-    The rest of the document is folded as much as possible.
+CLOSED: [2017-03-25 Sat 20:14]
+Create /sparse trees/ for selected information in an outline tree.
+The rest of the document is folded as much as possible.
 
-    Press =RET= to undo the highlights.
-
+Press =RET= to undo the highlights.
 **** =SPC-m-/-t= : Create sparse tree with all TODO entries
-
 **** =SPC-m-/-T= : Create sparse tree with entries having specific TODO keyword
-     Prompts further to choose the keyword, taken from the TODO keywords available for the buffer.
-
+Prompts further to choose the keyword, taken from the TODO keywords available for the buffer.
 **** =SPC-m-/-m= : Create sparse tree with entries selected by a tags/property match
-
 **** =SPC-m-/-p= : Create sparse tree with entries with chosen property and its value
-
 **** =SPC-m-/-r= : Create sparse tree with entries matching a regular expression
-
 **** =SPC-m-/-b= : Create sparse tree with entries with deadlines and schedules before a date
-
 **** =SPC-m-/-a= : Create sparse tree with entries with deadlines and schedules after a date
-
 **** =SPC-m-/-a= : Create sparse tree with entries with deadlines and schedules between a date range
-
 **** =SPC-m-/-d= : Create sparse tree with entries with deadlines and schedules within =org-deadline-warning-days=
-
-
 *** TODO Text Markup
-    Make words *bold*, /italic/, _underlined_, =code=, ~verbatim~, and +strike-through+.
+Make words *bold*, /italic/, _underlined_, =code=, ~verbatim~, and +strike-through+.
 
-    - [ ] Add the keybindings for the changing / assigning markups as well.
-
+- [ ] Add the keybindings for the changing / assigning markups as well.
 **** TODO Changing color of Markups
-     The goal is to have the different markups to show up in some bright colors, like in atom for markdown files.
+The goal is to have the different markups to show up in some bright colors, like in atom for markdown files.
 
-     Googling lead me to [[http://emacs.stackexchange.com/questions/5889/how-to-highlight-text-permanently-in-org-mode][this stackexchange question]] with the following code to be added to =dotspacemacs/user-init ()= /I guess/:
+Googling lead me to [[http://emacs.stackexchange.com/questions/5889/how-to-highlight-text-permanently-in-org-mode][this stackexchange question]] with the following code to be added to =dotspacemacs/user-init ()= /I guess/:
 
-     #+NAME: change color of markups
-     #+BEGIN_SRC emacs-lisp
-       (add-to-list 'org-emphasis-alist
-                    '("*" (:foreground "red")
-                      ))
-     #+END_SRC
+#+NAME: change color of markups
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'org-emphasis-alist
+        '("*" (:foreground "red")
+          ))
+#+END_SRC
 
-     - [ ] Figure out how to change only the color, and keep other properties as is
-     - [ ] Choose the colors you want to use, perhaps from [[https://github.com/promek/wombat-dark-syntax/blob/master/styles/colors.less][wombat-dark-syntax]].
-
+- [ ] Figure out how to change only the color, and keep other properties as is
+- [ ] Choose the colors you want to use, perhaps from [[https://github.com/promek/wombat-dark-syntax/blob/master/styles/colors.less][wombat-dark-syntax]].
 **** TODO Inline Maths using LaTeX
-
-
 *** DONE Plain lists
-    CLOSED: [2017-03-26 Sun 17:08]
-     There are three types of plain lists:
-     - Unordered :: with items starting with '=-=', '=+=', or '=*='.
-     - Ordered :: with items starting with '=1.=' or '=1)='.
-     - Description :: use '=::=' to separate the /term/ from the descrption,
+CLOSED: [2017-03-26 Sun 17:08]
+There are three types of plain lists:
+- Unordered :: with items starting with '=-=', '=+=', or '=*='.
+- Ordered :: with items starting with '=1.=' or '=1)='.
+- Description :: use '=::=' to separate the /term/ from the descrption,
 
-     Checkboxes can be added in the beginning of the items in any list as below.
-     1. [X] This is checked
-     2. [ ] This is unchecked
-
+Checkboxes can be added in the beginning of the items in any list as below.
+1. [X] This is checked
+2. [ ] This is unchecked
 **** =-= : Cycle the entire list level through different bullets (org-cycle-list-bullet)
-
 **** =CTRL-c-CTRL-*= : Convert the plain list at point into a subtree (org-list-make-subtree)
-
-
 *** TODO Footnotes
-
-
 *** TODO Tables
-
-
-
-
 *** LATER Zotero and org-mode using ~zotxt~
-    - References:
-      + [X] [[http://www.mkbehr.com/posts/a-research-workflow-with-zotero-and-org-mode/][A research workflow with Zotero and Org mode]]
-      + [ ] [[https://ontologicalblog.com/home/part-2/][ontological blog - ... Spacemacs for Academic Writing]]
-
-
+- References:
+  + [X] [[http://www.mkbehr.com/posts/a-research-workflow-with-zotero-and-org-mode/][A research workflow with Zotero and Org mode]]
+  + [ ] [[https://ontologicalblog.com/home/part-2/][ontological blog - ... Spacemacs for Academic Writing]]
 **** Enable ~org-zotxt-mode~ in the org buffer to use the zotxt package
 ***** =CTRL-c-"-i= : Insert a zotero link with descriptive link text after searching (org-zotxt-insert-reference-link)
-      By default seaches for title, creater, year.
-      Not hitting =RET= at the end allows for choosing other zotero search methods.
+By default seaches for title, creater, year.
+Not hitting =RET= at the end allows for choosing other zotero search methods.
 ***** TODO =SPC-m-i-z= : Insert zotero link(s) to the items selected in the zotero application
-      Facing some errors. This is the code being tried:
-      #+BEGIN_SRC emacs-lisp
-        (evil-define-key 'normal evil-org-mode-map
-          (kbd "SPC m i z") '(lambda () (interactive) (org-zotxt-insert-reference-link '(4)))  ;; insert selected in zotero
-          (kbd "SPC m i a") '(lambda () (interactive) (org-zotxt-insert-reference-link '(1)))  ;; allow choosing
-          )
+Facing some errors. This is the code being tried:
+#+BEGIN_SRC emacs-lisp
+(evil-define-key 'normal evil-org-mode-map
+  (kbd "SPC m i z") '(lambda () (interactive) (org-zotxt-insert-reference-link '(4)))  ;; insert selected in zotero
+  (kbd "SPC m i a") '(lambda () (interactive) (org-zotxt-insert-reference-link '(1)))  ;; allow choosing
+)
 
-      #+END_SRC
-
-
-
+#+END_SRC
 ***** =CTRL-c-"-u= : Update the zotero link at point (org-zotxt-update-reference-link-at-point)
 ***** =CTRL-c-"-a= : open attatchment of zotero item linked at point (org-zotxt-open-attachment)
-
-
 **** Enable ~zotxt-easykey-mode~ to get autocompletion of references
-     Takes some time to search.
-
-
-
-
-
+Takes some time to search.
 *** TODO Checkout [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]]
 *** TODO Configuring todos
 **** TODO Ask for adding remarks on state changes, for example why waiting
-
-
 ** TODO Checkout [[https://gist.github.com/526avijitgupta/fd058b3f61a5d23df667][spacemacs-cheatsheet]]
-
 ** TODO May be also watch [[https://youtu.be/ZFV5EqpZ6_s?list=PLrJ2YN5y27KLhd3yNs2dR8_inqtEiEweE][ABC's playlist]] for more spacemacs shortcuts
+** TODO Checkout [[http://orgmode.org/manual/Easy-Templates.html][templates]] for source blocks
+For auto completing the begin end of source blocks and others. Also Quote Blocks
 
+Essentially, use one of the following after a '<' and hit tab
 
-** TODO checkout [[http://orgmode.org/manual/Easy-Templates.html][templates]]
-   For auto completing the begin end of source blocks and others. Also Quote Blocks
-
-   Essentially, use one of the following after a '<' and hit tab
-
-   | Selector | for                |
-   |----------+--------------------|
-   | s        | #+BEGIN_SRC ...    |
-   | q        | #+BEGIN_QUOTE ...  |
-   | l        | #+BEGIN_LATEX ...  |
-   | c        | #+BEGIN_CENTER ... |
-   | L        | #+LaTeX:           |
-
+|----------+--------------------|
+| Selector | for                |
+|----------+--------------------|
+| s        | #+BEGIN_SRC ...    |
+| q        | #+BEGIN_QUOTE ...  |
+| l        | #+BEGIN_LATEX ...  |
+| c        | #+BEGIN_CENTER ... |
+| L        | #+LaTeX:           |
+|----------+--------------------|
 * MacOS Terminal
 
 ** Get all files currently open by all processes
-   - [[http://stackoverflow.com/questions/8317177/see-what-process-is-using-a-file-in-mac-os-x][Reference]]
-   - use =lsof= to list all open files, and pipe through =grep= to filter.
-
-* General
-
-** unicode for Bismillah
-   U+FDFD
-
-   ﷽
-
-
-   #+BEGIN_SRC python
-     print('\ufdfd')
-   #+END_SRC
-
+- [[http://stackoverflow.com/questions/8317177/see-what-process-is-using-a-file-in-mac-os-x][Reference]]
+- use =lsof= to list all open files, and pipe through =grep= to filter.
+* Python
 ** Better Factorial
-
 #+BEGIN_SRC python
 def factorial(x):
     res = 1
@@ -247,3 +171,21 @@ def factorial(x):
 
     return x
 #+END_SRC
+
+* Julia
+#+BEGIN_SRC julia
+println(1 + 1)
+#+END_SRC
+
+* General
+** unicode for Bismillah
+U+FDFD
+
+﷽
+
+
+#+BEGIN_SRC python
+print('\ufdfd')
+#+END_SRC
+
+'
