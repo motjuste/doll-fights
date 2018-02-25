@@ -16,7 +16,7 @@ ZSH_THEME="avit"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=13
@@ -50,7 +50,24 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow git-extras osx python wd brew mercurial zsh-autosuggestions)
+plugins=(
+    git
+    git-flow
+    git-extras
+    osx
+    python
+    pip
+    pylint
+    wd
+    brew
+    tmux
+    mercurial
+    zsh-autosuggestions
+    compleat
+    gradle
+    vi-mode
+    zsh-autosuggestions
+)
 
 # User configuration
 
@@ -106,8 +123,14 @@ alias a="atom ."
 alias sz="source ~/.zshrc"
 alias vz="vim ~/.zshrc"
 alias vv="vim ~/.vimrc"
-alias ggg="cat ~/.git-zsh-cheatsheet | more"
-alias gfl="git flow"
+
+# GIT
+alias ggg="alias | grep git"
+alias ggm="ggg | more"
+# alias gfl="git flow"
+
+## JULIA
+alias juliabin="/Applications/$(ls -t /Applications | grep Julia | head -1)/Contents/Resources/julia/bin/julia"
 
 ## PYTHON
 alias pw="pwall -m 'not long_running'"
@@ -126,4 +149,4 @@ export RENNET_ENV="$RENNET_ROOT/.rennet_env"
 
 
 # FLUTTER
-export PATH="/Users/abdullah/Delve/read_only/flutter/bin/:$PATH"
+export PATH="/Users/abdullah/Delve/read_only/flutter/bin:$PATH"
