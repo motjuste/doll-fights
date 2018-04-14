@@ -670,7 +670,7 @@
           },
           "to": [
             {
-              "key_code": "up_arrow",
+              "key_code": "escape",
               "modifiers": [
                 "left_shift",
                 "left_option"
@@ -904,12 +904,6 @@
           "to": [
             {
               "key_code": "escape"
-            },
-            {
-              "key_code": "open_bracket"
-            },
-            {
-              "key_code": "vk_none"
             }
           ],
           "conditions": [
