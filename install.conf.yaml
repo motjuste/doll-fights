@@ -21,4 +21,5 @@
     ~/.config/karabiner/assets/complex_modifications/vimodescape.json: karabiner/complex_modifications/vimodescape.json
 
 - shell:
-    - [git submodule update --init --recursive, "Installing submodules"]
+    - git submodule sync --recursive
+    - git submodule update --init --remote
