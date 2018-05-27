@@ -112,9 +112,10 @@ source ~/.z.sh
 # NEED BETTER SOLUTION: ZSH_CUSTOM???
 
 # added by Anaconda3 4.2.0 installer (Actually not)
-export PATH="/Users/abdullah/anaconda3/bin:$PATH"
-
-export PATH="/usr/local/sbin:$PATH"
+# export PATH="/Users/abdullah/anaconda3/bin:$PATH"
+source "$HOME/anaconda3/etc/profile.d/conda.sh"
+conda activate
+# export PATH="/usr/local/sbin:$PATH"
 
 # ==================================================================================
 
@@ -130,23 +131,34 @@ alias ggm="ggg | more"
 # alias gfl="git flow"
 
 ## JULIA
-alias juliabin="/Applications/$(ls -t /Applications | grep Julia | head -1)/Contents/Resources/julia/bin/julia"
+# alias juliabin="/Applications/$(ls -t /Applications | grep Julia | head -1)/Contents/Resources/julia/bin/julia"
 
 ## PYTHON
-alias pw="pwall -m 'not long_running'"
-alias pwv="pw -v"
-alias pwperf="pwv -m 'perf'"
-alias pwlf="pw -v --lf"
-alias pwall="PYTHONPATH=$PWD:$PYTHONPATH py.test -rxs"
-alias ppp="source activate p36"
+# alias pw="pwall -m 'not long_running'"
+# alias pwv="pw -v"
+# alias pwperf="pwv -m 'perf'"
+# alias pwlf="pw -v --lf"
+# alias pwall="PYTHONPATH=$PWD:$PYTHONPATH py.test -rxs"
+# alias ppp="source activate p36"
 
-## RENNET
-alias r3="source activate r3"
-export RENNET_ROOT="$HOME/Delve/iais/rennet"
-export RENNET_X_ROOT="$HOME/Delve/iais/rennet-x"
-export RENNET_DATA_ROOT="$HOME/Delve/iais/rennet-x/data"
-export RENNET_ENV="$RENNET_ROOT/.rennet_env"
+# ## RENNET
+# alias r3="source activate r3"
+# export RENNET_ROOT="$HOME/Delve/iais/rennet"
+# export RENNET_X_ROOT="$HOME/Delve/iais/rennet-x"
+# export RENNET_DATA_ROOT="$HOME/Delve/iais/rennet-x/data"
+# export RENNET_ENV="$RENNET_ROOT/.rennet_env"
 
 
 # FLUTTER
 export PATH="/Users/abdullah/Delve/read_only/flutter/bin:$PATH"
+
+# DIRENV
+eval "$(direnv hook zsh)"
+
+# PYENV
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
+
+## RUST
+export PATH="$HOME/.cargo/bin:$PATH"
