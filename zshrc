@@ -67,6 +67,9 @@ plugins=(
     gradle
     vi-mode
     zsh-autosuggestions
+    docker
+    docker-compose
+    docker-machine
 )
 
 # User configuration
@@ -124,6 +127,7 @@ alias a="atom ."
 alias sz="source ~/.zshrc"
 alias vz="vim ~/.zshrc"
 alias vv="vim ~/.vimrc"
+alias eg="egrep"
 
 # GIT
 alias ggg="alias | grep git"
