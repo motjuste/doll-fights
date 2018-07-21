@@ -188,7 +188,7 @@ let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.venv/*,*.pyc
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|venv)$'
 let g:ctrlp_max_height = 30
-let g:ctrlp_root_markers = ['src']
+let g:ctrlp_root_markers = ['pom.xml', '.gitignore', 'src', 'lib']
 
 " vim operator flashy
 map y <Plug>(operator-flashy)
