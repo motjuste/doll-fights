@@ -17,8 +17,8 @@
     ~/.tmuxlinesnapshot: tmuxlinesnapshot
     ~/.z.sh : z/z.sh
     ~/.git-zsh-cheatsheet: .git-zsh-cheatsheet
-    ~/.config/karabiner/assets/complex_modifications/shift-paran-dunder.json: karabiner/complex_modifications/shift-paran-dunder.json
-    ~/.config/karabiner/assets/complex_modifications/vimodescape.json: karabiner/complex_modifications/vimodescape.json
+    # ~/.config/karabiner/assets/complex_modifications/shift-paran-dunder.json: karabiner/complex_modifications/shift-paran-dunder.json
+    # ~/.config/karabiner/assets/complex_modifications/vimodescape.json: karabiner/complex_modifications/vimodescape.json
 
 - shell:
     - git submodule sync --recursive
