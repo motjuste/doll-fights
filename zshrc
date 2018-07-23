@@ -59,13 +59,9 @@ plugins=(
     pip
     pylint
     wd
-    brew
     tmux
     mercurial
-    zsh-autosuggestions
     compleat
-    gradle
-    vi-mode
     zsh-autosuggestions
     docker
     docker-compose
@@ -78,7 +74,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -122,8 +118,13 @@ alias sz="source ~/.zshrc"
 alias vz="vim ~/.zshrc"
 alias vv="vim ~/.vimrc"
 alias eg="egrep"
+alias ls='ls --color-auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 # GIT
+source .git-zsh-cheatsheet
 alias ggg="alias | grep git"
 alias ggm="ggg | more"
 # alias gfl="git flow"
@@ -144,3 +145,4 @@ fi
 
 ## RUST
 export PATH="$HOME/.cargo/bin:$PATH"
+

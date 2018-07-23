@@ -8,17 +8,13 @@
     ~/.zshrc: zshrc
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.gitignore: gitignore
-    ~/Wombat.itermcolors: Wombat.itermcolors
     ~/.pylintrc: pylintrc
     ~/.config/yapf/style: yapf_style
     ~/.inputrc: inputrc
-    # ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Wombat.dvtcolortheme: "Wombat-256-for-Xcode/Wombat 256 @ZacHallett.dvtcolortheme"
-    # "~/Library/Application Support/Karabiner/private.xml": karabiner/private.xml
     ~/.tmuxlinesnapshot: tmuxlinesnapshot
     ~/.z.sh : z/z.sh
     ~/.git-zsh-cheatsheet: .git-zsh-cheatsheet
-    # ~/.config/karabiner/assets/complex_modifications/shift-paran-dunder.json: karabiner/complex_modifications/shift-paran-dunder.json
-    # ~/.config/karabiner/assets/complex_modifications/vimodescape.json: karabiner/complex_modifications/vimodescape.json
+    ~/.oh-my-zsh/custom/themes/avit.zsh-theme: avit.simplified.zsh-theme
 
 - shell:
     - git submodule sync --recursive
