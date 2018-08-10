@@ -14,7 +14,6 @@
     ~/.tmuxlinesnapshot: tmuxlinesnapshot
     ~/.z.sh : z/z.sh
     ~/.git-zsh-cheatsheet: .git-zsh-cheatsheet
-    ~/.oh-my-zsh/custom/themes/avit.zsh-theme: avit.simplified.zsh-theme
 
 - shell:
     - git submodule sync --recursive
